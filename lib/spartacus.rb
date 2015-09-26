@@ -3,14 +3,9 @@ require 'httparty'
 class Spartacus
   include HTTParty
 
-  def initialize(api_jwt)
+  def initialize(api_jwt, api_base_path="https://www.bloc.io/api/v1")
     @api_jwt = api_jwt
-  end
-
-  # Set Base API Path
-  # @return [String] The base api path
-  def base_path
-    "http://localhost:3000/api/v1"
+    @api_base_path = api_base_path 
   end
 
   # Handle API timouts
@@ -38,7 +33,7 @@ class Spartacus
   def update_checkpoint(id, options={})
     accepted_params = ['name', 'summary', 'body', 'assignment', 'points', 'body_and_assignment']
     checkpoint_params = options.select {|k, v| accepted_params.include?(k) }
-    update_checkpoint_url = "#{base_path}/checkpoints/#{id}"
+    update_checkpoint_url = "#{api_base_path}/checkpoints/#{id}"
 
     handle_timeouts do
       self.class.put(update_checkpoint_url,
