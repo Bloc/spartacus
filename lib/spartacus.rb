@@ -38,7 +38,6 @@ class Spartacus
   def update_checkpoint(id, options={})
     accepted_params = ['name', 'summary', 'body', 'assignment', 'points', 'body_and_assignment']
     checkpoint_params = options.select {|k, v| accepted_params.include?(k) }
-    puts checkpoint_params
     update_checkpoint_url = "#{base_path}/checkpoints/#{id}"
 
     handle_timeouts do
