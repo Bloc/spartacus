@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'spartacus_client'
+  s.name        = 'spartacus'
   s.version     = '0.0.1'
   s.add_runtime_dependency 'httparty', '~>0.13.7'
   s.date        = '2015-09-25'
@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.description = "A client for the Bloc API"
   s.authors     = ["Ben Neely"]
   s.email       = 'ben@bloc.to'
-  s.files       = ["lib/spartacus_client.rb"]
+  s.files       = ["lib/spartacus.rb"]
   s.homepage    =
-    'http://rubygems.org/gems/spartacus_client'
+    'http://rubygems.org/gems/spartacus'
   s.license       = 'MIT'
 end

@@ -1,6 +1,6 @@
 require 'httparty'
 
-class SpartacusClient
+class Spartacus
   include HTTParty
 
   def initialize(api_jwt)

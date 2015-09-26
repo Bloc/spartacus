@@ -1,4 +1,4 @@
-#Spartacus Client
+#Spartacus
 
 Ruby toolkit for the Bloc API.
 
@@ -9,20 +9,20 @@ Ruby toolkit for the Bloc API.
 Install via Rubygems
 
 ```bash
-gem install spartacus_client
+gem install spartacus
 ```
 
 ... or add to your Gemfile
 
 ```ruby
-gem "octokit", "~> 4.0"
+gem "spartacus", "~> 0.0.1"
 ```
 
 ## Usage
 
-Create a new `SpartacusClient` using your Bloc API JSON Web Tokens
+Create a new `Spartacus` client using your Bloc API JSON Web Tokens
 ```ruby
-sc = SpartacusClient.new(ENV['API_JWT'])
+sc = Spartacus.new(ENV['API_JWT'])
 ```
 
 Then use the client to make requests:
