@@ -4,9 +4,13 @@ require 'active_support/inflector'
 module ClassFactory
   def ClassFactory.build_response_object(json_string, name)
     response_hash = JSON.parse(json_string)
-    checkpoint = ClassFactory::GenericClass.new
-    checkpoint.create_class name
-    name.camelize.constantize.new(response_hash)
+    if Object.const_defined?(name.camelize)
+      name.camelize.constantize.new(response_hash)
+    else
+      generic_class = ClassFactory::GenericClass.new
+      generic_class.create_class name
+      name.camelize.constantize.new(response_hash)
+    end
   end
 
   class GenericClass
