@@ -48,10 +48,27 @@ module Users
     end
 	end
 
-	def post_onboard(id)
+	def onboard(id)
 		url = "#{@api_base_path}/users/#{id}/onboard"
 		handle_timeouts do
     	self.class.post(url, headers: auth_header)
     end
+	end
+
+	def update_password(id, password)
+		url = "#{@api_base_path}/users/#{id}/update_password"
+		handle_timeouts do
+    	self.class.put(url, headers: auth_header,
+    		             query: { user: { password: password, confirmation: password } })
+    end
+	end
+
+	def update_user(id, user_params={})
+	end
+
+	def update_user_data(id, user_data_params={})
+	end
+
+	def replace_availability(id, time_slots={})
 	end
 end
