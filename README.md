@@ -15,14 +15,15 @@ gem install spartacus
 ... or add to your Gemfile
 
 ```ruby
-gem "spartacus", "~> 0.0.7"
+gem "spartacus", "~> 0.1.2"
 ```
 
 ## Usage
 
-Create a new `Spartacus` client using your Bloc API JSON Web Tokens
+Create a new `Spartacus` client using your Bloc username and password:
+
 ```ruby
-sc = Spartacus.new(ENV['API_JWT'])
+sc = Spartacus.new("ben@bloc.io", "gooderpassword")
 ```
 
 Then use the client to make requests:

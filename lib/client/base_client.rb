@@ -27,7 +27,7 @@ module BaseClient
   #
   # @return [Hash] The authorization header
   def auth_header
-    { "authorization" => @api_jwt }
+    { "authorization" => @auth_token }
   end
 
   def convert_keys(options)
