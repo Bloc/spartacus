@@ -1,5 +1,7 @@
-module RoadmapSections
+require_relative 'base_client'
 
+module RoadmapSections
+  include BaseClient
   # Create a checkpoint
   #
   # @param id [Integer] A roadmap section id.
@@ -10,7 +12,7 @@ module RoadmapSections
   # @option options [String] :assignment Checkpoint assignment.
   # @option options [Integer] :points Checkpoint point.
   # @option options [String] :body_and_assignment Checkpoint body and Assignment
-  # @return [HTTParty::Response] The updated checkpoint
+  # @return [Checkpoint] The created checkpoint
   # @example Create a checkpoint
   #   Spartacus#create_checkpoint(1, {name: 'Real Cool Checkpoint'})
   def create_checkpoint(id, options={})
@@ -19,9 +21,10 @@ module RoadmapSections
     url = "#{@api_base_path}/roadmap_sections/#{id}/create_checkpoint"
 
     handle_timeouts do
-      self.class.post(url,
-                     headers: auth_header,
-                     query: { checkpoint: checkpoint_params })
+      response = self.class.post(url,
+                                 headers: auth_header,
+                                 query: { checkpoint: checkpoint_params })
+      convert_response(response, "checkpoint")
     end
   end
 end
