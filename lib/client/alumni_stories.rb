@@ -19,7 +19,7 @@ module AlumniStories
       handle_timeouts do
         response = self.class.post(url,
                                    headers: auth_header,
-                                   query: { direction: direction })
+                                   body: { direction: direction })
         convert_response(response, "alumni_story")
       end
     else

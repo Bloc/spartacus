@@ -23,7 +23,7 @@ module RoadmapSections
     handle_timeouts do
       response = self.class.post(url,
                                  headers: auth_header,
-                                 query: { checkpoint: checkpoint_params })
+                                 body: { checkpoint: checkpoint_params })
       convert_response(response, "checkpoint")
     end
   end

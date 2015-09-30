@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'spartacus'
-  s.version     = '0.2.1'
+  s.version     = '0.2.2'
   s.files         = `git ls-files`.split($\)
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})

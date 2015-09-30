@@ -116,7 +116,7 @@ module Users
     url = "#{@api_base_path}/users/#{id}/update_password"
     handle_timeouts do
       response = self.class.put(url, headers: auth_header,
-                                query: { user: { password: password,
+                                body: { user: { password: password,
                                                  confirmation: password } })
       convert_response(response, "user")
 
@@ -185,7 +185,7 @@ module Users
 
     handle_timeouts do
       response = self.class.put(url, headers: auth_header,
-                                query: { user: user_params })
+                                body: { user: user_params })
       convert_response(response, "User")
     end
   end
@@ -210,7 +210,7 @@ module Users
 
     handle_timeouts do
       response = self.class.put(url, headers: auth_header,
-                                query: { user_data: user_data_params })
+                                body: { user_data: user_data_params })
       convert_response(response, "UserData")
     end
   end

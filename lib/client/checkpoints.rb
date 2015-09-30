@@ -40,7 +40,7 @@ module Checkpoints
 
     handle_timeouts do
       response = self.class.put(url, headers: auth_header,
-                                query: { checkpoint: checkpoint_params })
+                                body: { checkpoint: checkpoint_params })
       convert_response(response, "checkpoint")
     end
   end
