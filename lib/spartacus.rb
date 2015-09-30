@@ -1,10 +1,12 @@
 require 'httparty'
 require 'json'
 
-require_relative './client/alumni_stories'
-require_relative './client/checkpoints'
-require_relative './client/roadmap_sections'
-require_relative './client/users'
+require 'client/alumni_stories'
+require 'client/checkpoints'
+require 'client/roadmap_sections'
+require 'client/users'
+
+Dir[File.dirname(__FILE__) + '/client/*.rb'].each {|file| require file }
 
 class Spartacus
   include HTTParty
