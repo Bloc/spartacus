@@ -15,7 +15,7 @@ gem install spartacus
 ... or add to your Gemfile
 
 ```ruby
-gem "spartacus", "~> 0.1.2"
+gem "spartacus", "~> 0.1.6"
 ```
 
 ## Usage

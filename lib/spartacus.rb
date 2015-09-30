@@ -1,19 +1,23 @@
 require 'httparty'
 require 'json'
 
-Dir[File.dirname(__FILE__) + '/client/*.rb'].each {|file| require file }
+require_relative './client/alumni_stories'
+require_relative './client/checkpoints'
+require_relative './client/roadmap_sections'
+require_relative './client/users'
 
 class Spartacus
   include HTTParty
   include Checkpoints
   include Users
   include RoadmapSections
+  include AlumniStories
 
   def initialize(email, password, api_base_path="https://www.bloc.io/api/v1")
     @api_base_path = api_base_path
     url = "#{@api_base_path}/sessions"
 
-    response = self.class.post(url, query: { email: email, password: password } )
+    response = self.class.post(url, query: { email: email, password: password })
 
     if success?(response.code)
       response_hash = JSON.parse(response.body)
