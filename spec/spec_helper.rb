@@ -3,7 +3,7 @@ require 'webmock/rspec'
 require 'vcr'
 
 VCR.configure do |c|
-  c.cassette_library_dir = 'cassettes'
+  c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.ignore_request do |request|
     URI(request.uri).request_uri == '/api/v1/sessions'
