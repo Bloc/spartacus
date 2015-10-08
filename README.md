@@ -32,6 +32,10 @@ Then use the client to make requests:
 sc.update_checkpoint(129, {name: "New Checkpint Name"})
 ```
 
+## Documentation
+
+All the documentation lives [here](http://www.rubydoc.info/github/bmneely/spartacus/).
+
 ## Contributing
 
 1. Fork it
