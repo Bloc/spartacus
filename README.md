@@ -29,7 +29,7 @@ sc = Spartacus.new("ben@bloc.io", "gooderpassword")
 Then use the client to make requests:
 
 ```ruby
-sc.update_checkpoint(129, {name: "New Checkpint Name"})
+sc.update_checkpoint(129, {name: "New Checkpoint Name"})
 ```
 
 ## Documentation
