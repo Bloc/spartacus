@@ -16,8 +16,10 @@ module RoadmapSections
   # @example Create a checkpoint
   #   Spartacus#create_checkpoint(1, {name: 'Real Cool Checkpoint'})
   def create_checkpoint(id, options={})
-    accepted_params = ['name', 'summary', 'body', 'assignment', 'points', 'body_and_assignment']
-    checkpoint_params = options.select {|k, v| accepted_params.include?(k) }
+    whitelist = ['name', 'summary', 'body', 'assignment','body_and_assignment', 'points']
+
+    options = convert_keys(options)
+    checkpoint_params = whitelist_params(options, whitelist)
     url = "#{@api_base_path}/roadmap_sections/#{id}/create_checkpoint"
 
     handle_timeouts do

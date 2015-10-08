@@ -190,31 +190,31 @@ module Users
     end
   end
 
-  # Update a user's data
+  # # Update a user's data
+  # #
+  # # @param id [Integer] A user id.
+  # # @param options [Hash] A customizable set of options.
+  # # @option options [String] :how_heard How user heard about Bloc.
+  # # @option options [String] :how_heard_details How user heard about Bloc details.
+  # # @option options [String] :how_paid How user paid for Bloc.
+  # # @option options [String] :how_paid_details How user paid for Bloc details.
+  # # @return [UserData] The updated user data.
+  # # @example Update a user's data
+  # #   Spartacus#update_user_data(129, {how_heard: 'On the Googles'})
+  # def update_user_data(id, options={})
+  #   whitelist = ['how_heard', 'how_heard_details', 'how_paid', 'how_paid_details']
   #
-  # @param id [Integer] A user id.
-  # @param options [Hash] A customizable set of options.
-  # @option options [String] :how_heard How user heard about Bloc.
-  # @option options [String] :how_heard_details How user heard about Bloc details.
-  # @option options [String] :how_paid How user paid for Bloc.
-  # @option options [String] :how_paid_details How user paid for Bloc details.
-  # @return [UserData] The updated user data.
-  # @example Update a user's data
-  #   Spartacus#update_user_data(129, {how_heard: 'On the Googles'})
-  def update_user_data(id, options={})
-    whitelist = ['how_heard', 'how_heard_details', 'how_paid', 'how_paid_details']
+  #   options = convert_keys(options)
+  #   user_data_params = whitelist_params(options, whitelist)
+  #   url = "#{@api_base_path}/users/#{id}/update_user_data"
+  #
+  #   handle_timeouts do
+  #     response = self.class.put(url, headers: auth_header,
+  #                               body: { user_data: user_data_params })
+  #     convert_response(response, "UserData")
+  #   end
+  # end
 
-    options = convert_keys(options)
-    user_data_params = whitelist_params(options, whitelist)
-    url = "#{@api_base_path}/users/#{id}/update_user_data"
-
-    handle_timeouts do
-      response = self.class.put(url, headers: auth_header,
-                                body: { user_data: user_data_params })
-      convert_response(response, "UserData")
-    end
-  end
-
-  def replace_availability(id, time_slots={})
-  end
+  # def replace_availability(id, time_slots={})
+  # end
 end

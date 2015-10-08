@@ -17,7 +17,7 @@ module AlumniStories
       url = "#{@api_base_path}/alum_stories/#{id}/update_sort_order"
 
       handle_timeouts do
-        response = self.class.post(url,
+        response = self.class.put(url,
                                    headers: auth_header,
                                    body: { direction: direction })
         convert_response(response, "alumni_story")

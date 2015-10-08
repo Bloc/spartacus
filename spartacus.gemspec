@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'spartacus'
-  s.version     = '0.2.2'
+  s.version     = '0.2.5'
   s.files         = `git ls-files`.split($\)
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
@@ -18,4 +18,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "bundler"
   s.add_development_dependency "rspec"
   s.add_development_dependency "rake"
+  s.add_development_dependency "vcr"
+  s.add_development_dependency "webmock"
 end

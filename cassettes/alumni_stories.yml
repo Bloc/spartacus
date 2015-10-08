@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: http://localhost:3000/api/v1/alum_stories/2/update_sort_order
+    body:
+      encoding: UTF-8
+      string: direction=down
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"7363e85fe9edee6f053a4b319588c086"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - 49d671bd-e495-40aa-b1ae-e6c32b4e9d13
+      X-Runtime:
+      - '0.475900'
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Thu, 08 Oct 2015 05:26:41 GMT
+recorded_with: VCR 2.9.3
