@@ -3,7 +3,7 @@ require_relative 'base_client'
 module AlumniStories
   include BaseClient
 
-  # Create a checkpoint
+  # Change the sort order of an alumni story.
   #
   # @param id [Integer] An alumni story id.
   # @param direction [String] The direction to move to the alumni story.
