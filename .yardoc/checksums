@@ -1,0 +1,9 @@
+lib/spartacus.rb 90750edcdce6fb7a8a711f3f5659e9526fed1f32
+lib/client/users.rb cd9297285d72b8cd0e50a98d2bc6889290d67286
+lib/client/chapters.rb a6479b1694bc5966ccc214c7b3e801ad49bcc699
+lib/client/checkpoints.rb e10e99f7e598e7b65274b84363d3186164a2174f
+lib/client/base_client.rb 89950c611fc2d5f20d7e44a822bc91c2ec3157de
+lib/client/class_factory.rb 3fcaec58faefe77c075917f2c3f97ee7ef1f3405
+lib/client/alumni_stories.rb 0a715966a4d93273673d6df3d4b7030803f9db67
+lib/client/course_subjects.rb 855d4733f5dfc0d10b030cc585789a25de39cb10
+lib/client/roadmap_sections.rb 5f73f5d3dda4f97275eefcb9c8a4b9b3e22de3f3

@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: RoadmapSections
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!RoadmapSections.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (R)</a> &raquo;
+    
+    
+    <span class="title">RoadmapSections</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: RoadmapSections
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+      <dt class="r1">Includes:</dt>
+      <dd class="r1"><span class='object_link'><a href="BaseClient.html" title="BaseClient (module)">BaseClient</a></span></dd>
+      
+    
+  
+  
+    <dt class="r2">Included in:</dt>
+    <dd class="r2"><span class='object_link'><a href="Spartacus.html" title="Spartacus (class)">Spartacus</a></span></dd>
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/client/roadmap_sections.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_checkpoint-instance_method" title="#create_checkpoint (instance method)">- (Checkpoint) <strong>create_checkpoint</strong>(id, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Create a checkpoint.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="BaseClient.html" title="BaseClient (module)">BaseClient</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="BaseClient.html#auth_header-instance_method" title="BaseClient#auth_header (method)">#auth_header</a></span>, <span class='object_link'><a href="BaseClient.html#convert_keys-instance_method" title="BaseClient#convert_keys (method)">#convert_keys</a></span>, <span class='object_link'><a href="BaseClient.html#convert_response-instance_method" title="BaseClient#convert_response (method)">#convert_response</a></span>, <span class='object_link'><a href="BaseClient.html#handle_timeouts-instance_method" title="BaseClient#handle_timeouts (method)">#handle_timeouts</a></span>, <span class='object_link'><a href="BaseClient.html#success%3F-instance_method" title="BaseClient#success? (method)">#success?</a></span>, <span class='object_link'><a href="BaseClient.html#whitelist_params-instance_method" title="BaseClient#whitelist_params (method)">#whitelist_params</a></span></p>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="create_checkpoint-instance_method">
+  
+    - (<tt>Checkpoint</tt>) <strong>create_checkpoint</strong>(id, options = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Create a checkpoint</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>Create a checkpoint</p>
+</div></p>
+      
+      <pre class="example code"><code><span class='const'>Spartacus</span><span class='comment'>#create_checkpoint(1, {name: &#39;Real Cool Checkpoint&#39;})</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>id</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A roadmap section id.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A customizable set of options.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
+    <ul class="option">
+      
+        <li>
+          <span class="name">:name</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Checkpoint name.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:summary</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Checkpoint summary.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:body</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Checkpoint body.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:assignment</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Checkpoint assignment.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:points</span>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Checkpoint point.</p>
+</div>
+          
+        </li>
+      
+        <li>
+          <span class="name">:body_and_assignment</span>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="default">
+            
+          </span>
+          
+            &mdash; <div class='inline'>
+<p>Checkpoint body and Assignment</p>
+</div>
+          
+        </li>
+      
+    </ul>
+  
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Checkpoint</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The created checkpoint</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/client/roadmap_sections.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_checkpoint'>create_checkpoint</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_whitelist'>whitelist</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>name</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>body</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>assignment</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>body_and_assignment</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>points</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='id identifier rubyid_convert_keys'>convert_keys</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_checkpoint_params'>checkpoint_params</span> <span class='op'>=</span> <span class='id identifier rubyid_whitelist_params'>whitelist_params</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='comma'>,</span> <span class='id identifier rubyid_whitelist'>whitelist</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_url'>url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@api_base_path</span><span class='embexpr_end'>}</span><span class='tstring_content'>/roadmap_sections/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>/create_checkpoint</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_handle_timeouts'>handle_timeouts</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='id identifier rubyid_url'>url</span><span class='comma'>,</span>
+                               <span class='label'>headers:</span> <span class='id identifier rubyid_auth_header'>auth_header</span><span class='comma'>,</span>
+                               <span class='label'>body:</span> <span class='lbrace'>{</span> <span class='label'>checkpoint:</span> <span class='id identifier rubyid_checkpoint_params'>checkpoint_params</span> <span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_convert_response'>convert_response</span><span class='lparen'>(</span><span class='id identifier rubyid_response'>response</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>checkpoint</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Thu Oct  8 09:11:25 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.1.7).
+</div>
+
+  </body>
+</html>
