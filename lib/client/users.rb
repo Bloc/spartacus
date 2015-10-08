@@ -1,4 +1,7 @@
+require_relative 'base_client'
+
 module Users
+  include BaseClient
 
   # Get all users
   #
