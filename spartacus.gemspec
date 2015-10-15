@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'spartacus'
-  s.version     = '0.2.5'
+  s.version     = '0.2.6'
   s.files         = `git ls-files`.split($\)
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
@@ -15,9 +15,9 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'httparty', '~>0.13.7'
   s.add_runtime_dependency 'activesupport', '~>4.2'
   s.add_runtime_dependency 'json', '~>1.8'
-  s.add_development_dependency "bundler"
-  s.add_development_dependency "rspec"
-  s.add_development_dependency "rake"
-  s.add_development_dependency "vcr"
-  s.add_development_dependency "webmock"
+  s.add_development_dependency 'bundler', '~>1.10'
+  s.add_development_dependency 'rspec', '~> 0'
+  s.add_development_dependency 'rake', '~>10.4'
+  s.add_development_dependency 'vcr', '~>2.9'
+  s.add_development_dependency 'webmock', '~>1.22'
 end
