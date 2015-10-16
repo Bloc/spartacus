@@ -47,6 +47,21 @@ module Resources
     end
   end
 
+  # Return tags for a resource
+  #
+  # @param id [Integer] A resource id.
+  # @return [Array] The resource's tags.
+  # @example Remove a tag from a resource
+  #   Spartacus#tags_for_resource(129)
+  def tags_for_resource(id)
+    url = "#{@api_base_path}/resources/#{id}/tags"
+
+    handle_timeouts do
+      response = self.class.post(url, headers: auth_header)
+      JSON.parse(response.body)['new_list']
+    end
+  end
+
   # Add a tag to a resource
   #
   # @param id [Integer] A resource id.
