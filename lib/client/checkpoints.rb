@@ -7,7 +7,7 @@ module Checkpoints
   # @param id [Integer] A roadmap section id.
   # @return [Checkpoint] The checkpoint.
   # @example Get a checkpoint
-  #   Spartacus#get_checkpoint(1, {name: 'Real Cool Checkpoint'})
+  #   Spartacus#get_checkpoint(1)
   def get_checkpoint(id)
     url = "#{@api_base_path}/checkpoints/#{id}"
 

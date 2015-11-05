@@ -6,18 +6,20 @@ require_relative 'client/checkpoints'
 require_relative 'client/course_subjects'
 require_relative 'client/resources'
 require_relative 'client/roadmap_sections'
+require_relative 'client/roadmaps'
 require_relative 'client/users'
 
 Dir[File.dirname(__FILE__) + '/client/*.rb'].each {|file| require file }
 
 class Spartacus
   include HTTParty
-  include Checkpoints
-  include Users
-  include RoadmapSections
   include AlumniStories
+  include Checkpoints
   include CourseSubjects
   include Resources
+  include RoadmapSections
+  include Roadmaps
+  include Users
 
   def initialize(email, password, api_base_path="https://www.bloc.io/api/v1")
     @api_base_path = api_base_path
