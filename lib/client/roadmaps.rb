@@ -42,8 +42,8 @@ module Roadmaps
   # @option options [Integer] :projects Number of roadmap projects
   # @return [Roadmap] The updated roadmap
   # @example Update a roadmap
-  #   Spartacus#update_checkpoint(129, {name: 'Real Cool Roadmap'})
-  def update_checkpoint(id, options={})
+  #   Spartacus#update_roadmap(129, {name: 'Real Cool Roadmap'})
+  def update_roadmap(id, options={})
     whitelist = ['name', 'display_name', 'version', 'projects']
 
     options = convert_keys(options)
