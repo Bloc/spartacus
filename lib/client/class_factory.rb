@@ -2,8 +2,7 @@ require 'json'
 require 'active_support/inflector'
 
 module ClassFactory
-  def ClassFactory.build_response_object(json_string, name)
-    response_hash = JSON.parse(json_string)
+  def ClassFactory.build_response_object(response_hash, name)
     if Object.const_defined?(name.camelize)
       name.camelize.constantize.new(response_hash)
     else

@@ -44,19 +44,4 @@ module Checkpoints
       convert_response(response, "checkpoint")
     end
   end
-
-  # # Delete a checkpoint
-  # #
-  # # @param id [Integer] A checkpoint id.
-  # # @return [Checkpoint] The deleted checkpoint.
-  # # @example Delete a checkpoint
-  # #   Spartacus#delete_checkpoint(1, {name: 'Real Cool Checkpoint'})
-  # def delete_checkpoint(id)
-  #   url = "#{@api_base_path}/checkpoints/#{id}"
-  #
-  #   handle_timeouts do
-  #     response = self.class.delete(url, headers: auth_header)
-  #     convert_response(response, "checkpoint")
-  #   end
-  # end
 end

@@ -4,6 +4,7 @@ require 'json'
 require_relative 'client/alumni_stories'
 require_relative 'client/checkpoints'
 require_relative 'client/course_subjects'
+require_relative 'client/mentors'
 require_relative 'client/resources'
 require_relative 'client/roadmap_sections'
 require_relative 'client/roadmaps'
@@ -20,6 +21,7 @@ class Spartacus
   include RoadmapSections
   include Roadmaps
   include Users
+  include Mentors
 
   def initialize(email, password, api_base_path="https://www.bloc.io/api/v1")
     @api_base_path = api_base_path

@@ -13,7 +13,15 @@ module BaseClient
   # This needs a better name
   def convert_response(response, name)
     if success?(response.code)
-     ClassFactory.build_response_object(response.body, name)
+      if response.body.is_a? String
+        body = JSON.parse(response.body)
+      end
+
+      if body.is_a? Array
+        body.map {|hash| ClassFactory.build_response_object(hash, name)}
+      else
+        ClassFactory.build_response_object(body, name)
+      end
     else
      return response
     end

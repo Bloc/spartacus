@@ -28,7 +28,8 @@ module Roadmaps
     url = "#{@api_base_path}/roadmaps/#{id}/sections"
 
     handle_timeouts do
-      self.class.get(url, headers: auth_header)
+      response = self.class.get(url, headers: auth_header)
+      convert_response(response, "section")
     end
   end
 

@@ -11,7 +11,8 @@ module Users
   def get_users
     url = "#{@api_base_path}/users"
     handle_timeouts do
-      self.class.get(url, headers: auth_header)
+      response = self.class.get(url, headers: auth_header)
+      convert_response(response, "user")
     end
   end
 
@@ -65,7 +66,8 @@ module Users
   def get_availability(id)
     url = "#{@api_base_path}/users/#{id}/availability"
     handle_timeouts do
-      self.class.get(url, headers: auth_header)
+      response = self.class.get(url, headers: auth_header)
+      convert_response(response, "availability")
     end
   end
 
