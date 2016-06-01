@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe AlumniStories do
   before do
-    @client = Spartacus.new(ENV['BLOCUSER'], ENV['BLOCPASS'], 'http://localhost:3000/api/v1')
+    stub_request(:any, "http://localhost:3000")
+    @client = Spartacus.new(ENV['BLOCUSER'], ENV['BLOCPASS'])
   end
 
   describe '#update_alum_story_sort_order' do

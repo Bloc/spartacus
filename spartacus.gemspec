@@ -6,18 +6,19 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
   s.date        = '2015-09-25'
-  s.summary     = 'A client for the Bloc AP'
+  s.summary     = 'A client for the Bloc API'
   s.description = 'A client for the Bloc API'
   s.authors     = ['Ben Neely']
   s.email       = 'ben@bloc.to'
   s.homepage    = 'http://rubygems.org/gems/spartacus'
   s.license     = 'MIT'
   s.add_runtime_dependency 'httparty', '~>0.13.7'
-  s.add_runtime_dependency 'activesupport', '~>4.2'
-  s.add_runtime_dependency 'json', '~>1.8'
-  s.add_development_dependency 'bundler', '~>1.10'
-  s.add_development_dependency 'rspec', '~> 0'
-  s.add_development_dependency 'rake', '~>10.4'
-  s.add_development_dependency 'vcr', '~>2.9'
-  s.add_development_dependency 'webmock', '~>1.22'
+  s.add_runtime_dependency 'activesupport', '~>4.2.6'
+  s.add_runtime_dependency 'json', '~>1.8.3'
+  s.add_runtime_dependency 'dotenv', '~>2.1.1'
+  s.add_development_dependency 'bundler', '~>1.12.5'
+  s.add_development_dependency 'rspec', '~> 3.4'
+  s.add_development_dependency 'rake', '~>11.1.2'
+  s.add_development_dependency 'vcr', '~>3.0.3'
+  s.add_development_dependency 'webmock', '~>2.0.3'
 end

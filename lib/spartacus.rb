@@ -1,5 +1,6 @@
 require 'httparty'
 require 'json'
+require 'dotenv'
 
 require_relative 'client/alumni_stories'
 require_relative 'client/checkpoints'
