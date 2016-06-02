@@ -2,7 +2,6 @@ require 'httparty'
 require 'json'
 require 'dotenv'
 Dotenv.load
-
 require_relative 'client/alumni_stories'
 require_relative 'client/checkpoints'
 require_relative 'client/course_subjects'
