@@ -2,16 +2,24 @@
 http_interactions:
 - request:
     method: put
-    uri: http://localhost:3000/api/v1/alum_stories/2/update_sort_order
+    uri: https://www.bloc.io/api/v1/alum_stories/2/update_sort_order
     body:
       encoding: UTF-8
       string: direction=down
     headers: {}
   response:
     status:
-      code: 200
-      message: OK
+      code: 404
+      message: Not Found
     headers:
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 01 Jun 2016 20:23:55 GMT
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=31536000
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -20,23 +28,21 @@ http_interactions:
       - nosniff
       Content-Type:
       - application/json; charset=utf-8
-      Etag:
-      - '"7363e85fe9edee6f053a4b319588c086"'
       Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Meta-Request-Version:
-      - 0.3.4
+      - no-cache
       X-Request-Id:
-      - 49d671bd-e495-40aa-b1ae-e6c32b4e9d13
+      - 71864a48-dba0-4b93-8e54-075fdce50009
       X-Runtime:
-      - '0.475900'
+      - '0.103312'
       Vary:
       - Accept-Encoding
       Transfer-Encoding:
       - chunked
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"success":true}'
+      string: '{"message":"Resource not found"}'
     http_version: 
-  recorded_at: Thu, 08 Oct 2015 05:26:41 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Wed, 01 Jun 2016 20:23:56 GMT
+recorded_with: VCR 3.0.3
