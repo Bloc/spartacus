@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'spartacus'
-  s.version     = '0.2.7'
+  s.version     = '0.2.8'
   s.files         = `git ls-files`.split($\)
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.date        = '2015-09-25'
   s.summary     = 'A client for the Bloc API'
   s.description = 'A client for the Bloc API'
-  s.authors     = ['Ben Neely']
+  s.authors     = ['Ben Neely', 'Joe Lipper']
   s.email       = 'ben@bloc.to'
   s.homepage    = 'http://rubygems.org/gems/spartacus'
   s.license     = 'MIT'
