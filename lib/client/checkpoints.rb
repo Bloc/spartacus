@@ -56,7 +56,7 @@ module Checkpoints
   #       {
   #         ids: [],
   #         name: 'Sample checkpoint 1',
-  #         description: 'Message from Tamriel',
+  #         summary: 'Message from Tamriel',
   #         body: 'Listen to the Nine',
   #         position: 1
   #       },
