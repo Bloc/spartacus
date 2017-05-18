@@ -44,4 +44,39 @@ module Checkpoints
       convert_response(response, "checkpoint")
     end
   end
+
+  # Create multiple checkpoints in a single request
+  #
+  # @param roadmap_section_id [Integer] id for roadmap section the checkpoints belong to.
+  # @return [Array] Array of the created checkpoints.
+  # @example Create multiple checkpoints
+  #   Spartacus#batch_create_checkpoints(
+  #     163,
+  #     [
+  #       {
+  #         ids: [],
+  #         name: 'Sample checkpoint 1',
+  #         summary: 'Message from Tamriel',
+  #         body: 'Listen to the Nine',
+  #         position: 1
+  #       },
+  #       ...
+  #     ]
+  #   )
+
+  def batch_create_checkpoints(roadmap_section_id=nil, checkpoints=[])
+    url = "#{@api_base_path}/checkpoints/batch_create"
+
+    handle_timeouts do
+      response = self.class.post(
+        url,
+        headers: auth_header,
+        body: {
+          roadmap_section_id: roadmap_section_id,
+          checkpoints: checkpoints
+        }
+      )
+      convert_response(response, "checkpoints")
+    end
+  end
 end
