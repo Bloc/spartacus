@@ -76,7 +76,7 @@ module Checkpoints
           checkpoints: checkpoints
         }
       )
-      convert_response(response, "checkpoints")
+      convert_response(response, "checkpoint")
     end
   end
 end
