@@ -64,7 +64,7 @@ module Checkpoints
   #     ]
   #   )
 
-  def batch_create_checkpoints(roadmap_section_id=nil, checkpoints=[])
+  def batch_create_checkpoints(section_id=nil, checkpoints=[])
     url = "#{@api_base_path}/checkpoints/batch_create"
 
     handle_timeouts do
@@ -72,7 +72,7 @@ module Checkpoints
         url,
         headers: auth_header,
         body: {
-          roadmap_section_id: roadmap_section_id,
+          section_id: section_id,
           checkpoints: checkpoints
         }
       )
